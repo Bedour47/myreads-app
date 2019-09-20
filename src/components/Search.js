@@ -25,14 +25,11 @@ export default class Search extends Component {
 
     // Search function
     search = (query) => { 
-        this.updateSearchedBooks([]) 
-        this.updateQuery(query)    
-       
-        query.trim().length > 0 ? BooksAPI.search(query)
-          .then((results) => {
-              this.updateSearchedBooks(results)
-          })
-        : this.updateSearchedBooks([])
+      this.updateQuery(query)    
+      query.trim().length > 0 ? BooksAPI.search(query).then((results) => {
+            this.updateSearchedBooks(results)
+        })
+      : this.updateSearchedBooks([])
     }
 
     render() {
