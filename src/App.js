@@ -11,7 +11,7 @@ class BooksApp extends React.Component {
   }
   
   componentDidMount() {
-    // fetch data and update state
+    // Get all books and update state
     BooksAPI.getAll().then((response) => {
       this.setState(() => ({
         books: response

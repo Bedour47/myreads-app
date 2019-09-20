@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class BookItem extends Component {
-    render(){
+export default function BookItem (props) {
         return (
             <>
                 <li>
                     <div className="book">
                         <div className="book-top">
-                            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${this.props.thumbnail})` }}></div>
+                            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${props.thumbnail})` }}></div>
                             <div className="book-shelf-changer">
-                                <select defaultValue={this.props.shelf} onChange = {(e) => this.props.onUpdateBookShelf(this.props.book, e.target.value)}>
+                                <select defaultValue={props.shelf} onChange = {(e) => props.onUpdateBookShelf(props.book, e.target.value)}>
                                     <option value="move" disabled>Move to...</option>
                                     <option value="currentlyReading">Currently Reading</option>
                                     <option value="wantToRead">Want to Read</option>
@@ -18,11 +17,10 @@ export default class BookItem extends Component {
                                 </select>
                             </div>
                         </div>
-                        <div className="book-title">{this.props.title}</div>
-                        <div className="book-authors">{this.props.authors}</div>
+                        <div className="book-title">{props.title}</div>
+                        <div className="book-authors">{props.authors}</div>
                     </div>
                 </li>
             </>
         )
-    }
 }

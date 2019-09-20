@@ -7,6 +7,7 @@ export default class Home extends Component {
     render() {
         const { books, onUpdateBookShelf } = this.props
 
+        // Set all book's shelf contents
         const currentlyReadingBooks = books.filter( book => {
             return book.shelf === 'currentlyReading'
         })
@@ -26,15 +27,15 @@ export default class Home extends Component {
               <div>
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Currently Reading</h2>
-                  <BookList books={currentlyReadingBooks} onUpdateBookShelf={onUpdateBookShelf} />
+                  <BookList allBooks={books} books={currentlyReadingBooks} onUpdateBookShelf={onUpdateBookShelf} />
                 </div>
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Want to Read</h2>
-                  <BookList books={wantToReadBooks} onUpdateBookShelf={onUpdateBookShelf} />
+                  <BookList allBooks={books} books={wantToReadBooks} onUpdateBookShelf={onUpdateBookShelf} />
                 </div>
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Read</h2>
-                  <BookList books={readBooks} onUpdateBookShelf={onUpdateBookShelf} />
+                  <BookList allBooks={books} books={readBooks} onUpdateBookShelf={onUpdateBookShelf} />
                 </div>
               </div>
             </div>
