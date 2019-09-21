@@ -17,7 +17,7 @@ export default class BookList extends Component {
                 title={book.title}  
                 authors={
                     book.authors !== undefined && 
-                    book.authors.map((author) => ( author+' ' ))
+                    book.authors.map((author, index) => ( book.authors.length - 1  !== index ? author + ', ' : author ))
                 } 
                 thumbnail={
                     book.imageLinks !== undefined 
