@@ -5,7 +5,8 @@ This project is created for [React Nanodegree Program](https://www.udacity.com/c
 
 ## Overview
 
-MyReads is a book tracking app built with `React JS` that allows the user to categorize the books in three shelves [Currently Reading, Want To Read, Read], where the user can change the category and shift the book to another shelf or even remove it from all shelves. Also,  the user can search for a book and add it to any of their shelves. Click [here](https://bedour47.github.io/myreads-app/#/myreads/) to view the app!
+MyReads is a book tracking app built with `React JS` that allows the user to categorize the books in three shelves [Currently Reading, Want To Read, Read], where the user can change the category and shift the book to another shelf or even remove it from all shelves. Also,  the user can search for a book and add it to any of their shelves.
+Click [here](https://bedour47.github.io/myreads-app/#/myreads/) to view the app!
 
 
 ## Installation
